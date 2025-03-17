@@ -64,20 +64,30 @@ footer a {
 /* Main Content */
 
 h1 {
-    font-weight: 700; /* bold */
+    font-weight: 800; /* bold */
     font-size: 2.5em;
     font-style: normal;
 }
 
 h2 {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.8em;
     text-decoration: underline;
 }
 
 h3 {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.4em;
+}
+
+h4 {
+    font-weight: 500;
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+h2, h3, h4, p, figcaption, ol {
+    margin-bottom: 2%; 
 }
 
 #main-content {
@@ -93,7 +103,7 @@ h3 {
 }
 
 .about {
-    padding: 5% 0 5% 0;
+    padding: 5% 0 0 0;
 }
 
 .article-row {
@@ -110,3 +120,4 @@ h3 {
     text-align: center;       
     box-shadow: 0 4px 4px rgba(0,0,0,0.1); 
 }
+
