@@ -14,8 +14,9 @@
 
     <header>
         <a class="skip" href="#main-content">Skip to Main Content</a>
-        <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
+        <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo" class="logo">
         <nav>
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
             <ul>
                 <li><a href = "index.html">Home</a></li>
                 <li><a href = "cew+.html">CEW+</a></li>
@@ -116,9 +117,20 @@
 
     </main>
     <footer>
-        <p>Maize and Blue Cupboard | <a href="https://mbc.studentlife.umich.edu/">Maize and Blue Cupboard </a></p>
+        <p>Maize and Blue Cupboard | <a href="https://mbc.studentlife.umich.edu/">Website </a></p>
+        <p>© Copyrights <span id="year"></span> by Allison Liu. </br> All rights reserved.</p>
     </footer>
     
 </body>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+    // got this from https://www.codexworld.com/how-to/get-current-year-to-display-dynamic-year-in-copyright-using-javascript/
+    function toggleMenu() {
+        const menu = document.querySelector("nav ul");
+        if (menu) {
+            menu.classList.toggle("active");
+        }
+    }
+</script>
 
 </html>

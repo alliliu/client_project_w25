@@ -1,7 +1,7 @@
 * {
     font-family: "Atkinson Hyperlegible", sans-serif;
     font-style: normal;
-    font-size: 1.4em;
+    font-size: 18px;
     font-weight: 400; /* normal */
     line-height: 150%;
     /* margin-top: 1.5em;
@@ -15,7 +15,104 @@
 }
 
 /* Navigation & Footer */
+header {
+    /* display: flex; */
+    justify-content: space-between; /* Pushes logo left, menu icon right */
+}
+
+.logo {
+    max-width: 35%;
+    max-height: 15%;
+    margin-right: auto;
+}
+
 header, footer {
+    display: flex;
+    background-color: #00274C;
+    padding: 10%;
+    width: 100%;
+}
+
+nav {
+    position: relative;
+    width: 30%;
+    left: 0;
+}
+
+nav ul { /* list items of the menu nav bar */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #00274C;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+}
+
+nav ul li {
+    border-bottom: 2px solid #FFFFFF;
+}
+
+nav ul li a {
+    display: flex;
+    color: #FFCB05;
+    padding: 25%;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+/* Toggle button */
+.menu-toggle {
+    background: none;
+    border: none;
+    color: #FFCB05;
+    font-size: 5em; /* size of menu icon */
+    padding: 10px;
+    margin-left: auto;
+}
+
+/* Show menu when active */
+nav ul.active {
+    display: flex;
+}
+
+nav ul li a, footer, .button a{
+    color: #FFCB05;
+    text-decoration: none;
+    border-radius: 8px;  
+}
+
+nav ul li a:hover, footer a:hover, .button a:hover {
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+nav ul li a.active { /* indicate which page user is on */
+    font-weight: 700;
+    text-decoration: underline;
+    color: white;
+}
+
+footer a {
+    text-decoration: underline;
+    color: white;
+}
+
+footer {
+    flex-direction: column;
+    font-size: 1.4em;
+}
+
+
+/* TABLET VIEW */
+
+/* header, footer {
     background-color: #00274C;
     padding: 3%;
 }
@@ -26,14 +123,14 @@ header img{
     float: inline-start;
 }
 
-nav > ul, footer {
+nav ul, footer {
     display: flex;
     justify-content: space-between;
     font-size: 1.6em;
     padding: 2%; 
 }
 
-nav > ul li a, footer, .button a{
+nav ul li a, footer, .button a{
     color: #FFCB05;
     text-decoration: none;
     border-radius: 8px;  
@@ -47,7 +144,7 @@ nav ul li a:hover, footer a:hover, .button a:hover {
 footer a {
     text-decoration: underline;
     color: white;
-}
+} */
 
   
 /* Skip to main content */
@@ -104,13 +201,14 @@ h2, h3, h4, p, figcaption, ol {
 
 .about {
     padding: 5% 0 0 0;
+    max-width: 100%;
 }
 
 .article-row {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; /* Creates a single row with one column per card */
+    grid-template-columns: 5% 85% 5%; /* 3-column format */
     gap: 20px;                              
-  }
+}
   
 .card {
     background-color: #f9f9f9; 
@@ -119,5 +217,5 @@ h2, h3, h4, p, figcaption, ol {
     padding: 3%;             
     text-align: center;       
     box-shadow: 0 4px 4px rgba(0,0,0,0.1); 
+    grid-column: 2 / span 1;
 }
-
