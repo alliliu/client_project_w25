@@ -17,21 +17,15 @@ header {
     align-items: center;
     justify-content: space-between; /* Logo on left, menu icon on right */
     background-color: #00274C;
-    padding: 10%;
-    width: 100%;
 }
 
 .logo {
     max-width: 35%;
-    max-height: 15%;
-    /* margin-right: auto; */
+    padding: 3%;
 }
 
 header, footer {
-    /* display: flex; */
     background-color: #00274C;
-    padding: 10%;
-    width: 100%;
 }
 
 nav {
@@ -79,8 +73,8 @@ nav ul.active {
 }
 
 /* Indicate Active Page */
-nav ul li a.active {
-    font-weight: 700;
+.active {
+    font-weight: 900;
     text-decoration: underline;
     color: white;
 }
@@ -110,7 +104,6 @@ footer a {
 footer {
     background-color: #00274C;
     padding: 10%;
-    text-align: center;
     flex-direction: column;
     font-size: 1.4em;
 }
@@ -204,7 +197,7 @@ h2, h3, h4, p, figcaption, ol {
 
     header, footer {
         background-color: #00274C;
-        padding: 3%;
+        /* padding: 3%; */
     }
 
     .logo {
@@ -221,8 +214,13 @@ h2, h3, h4, p, figcaption, ol {
         align-items: center;
     }
 
-    nav ul li { 
-        padding: 14%;
+    .menu-toggle { /* Hide hamburger menu */
+        display: none;
+    }
+
+    nav ul li {
+        border-bottom: none;
+        padding: 13%;
     }
 
     footer {
@@ -233,12 +231,21 @@ h2, h3, h4, p, figcaption, ol {
         font-size: 1.6em;
     }
 
-    .menu-toggle { /* Hide hamburger menu */
-        display: none;
+    .article-row {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%; /* 4-column format */
+        /* grid-template-rows: 25% 25%; */
+        gap: 20px;                              
     }
 
-    nav ul li {
-        border-bottom: none;
+    .card {
+        background-color: #f9f9f9; 
+        border: 2px solid #00274C;    
+        border-radius: 8px;        
+        padding: 2%;             
+        text-align: center;       
+        box-shadow: 0 4px 4px rgba(0,0,0,0.1); 
+        grid-column: 1 / span 2;
+        /* grid-row: 1 / 3; */
     }
-
 }
